@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Consultoría | JD Edwards ERP</title>
+  <!-- Tailwind CSS desde CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome para íconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-blue-50 text-gray-800 font-sans">
+  <!-- Encabezado con logo -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <img src="logo.png" alt="Logo de AG Consultoría" class="h-12">
+    <nav class="space-x-4">
+      <a href="#quienes" class="hover:text-blue-500">Quiénes Somos</a>
+      <a href="#servicios" class="hover:text-blue-500">Servicios</a>
+      <a href="#soporte" class="hover:text-blue-500">Soporte</a>
+      <a href="#contacto" class="hover:text-blue-500">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Imagen de tecnología destacada -->
+  <section class="relative">
+    <img src="https://images.unsplash.com/photo-1581092334805-4c4e7a55b9c0?auto=format&fit=crop&w=1470&q=80" alt="Tecnología ERP" class="w-full h-64 object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+      <h1 class="text-white text-3xl md:text-4xl font-bold">Soluciones ERP a tu alcance</h1>
+    </div>
+  </section>
+
+  <!-- Sección: Qué es un ERP -->
+  <section class="p-6 bg-white">
+    <!-- Comentario explicativo sobre ERP -->
+    <!-- Un ERP (Enterprise Resource Planning) es un sistema de planificación empresarial que integra todas las áreas de una empresa: finanzas, compras, ventas, inventario, etc. JD Edwards es uno de los ERP más robustos y adaptables para empresas medianas y grandes. -->
+    <h2 class="text-2xl font-bold mb-2">¿Qué es un ERP?</h2>
+    <p>Un ERP permite mejorar la eficiencia, reducir costos y centralizar la información en una sola plataforma. Nosotros te ayudamos a implementarlo y optimizarlo.</p>
+  </section>
+
+  <!-- Sección: Quiénes somos -->
+  <section id="quienes" class="p-6">
+    <h2 class="text-2xl font-bold mb-2">Quiénes Somos</h2>
+    <div class="md:flex gap-6 items-center">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437f1?auto=format&fit=crop&w=800&q=80" alt="Consultores ERP" class="w-full md:w-1/2 rounded shadow">
+      <p class="mt-4 md:mt-0">AG Consultoría es un equipo de expertos en soluciones ERP, con énfasis en JD Edwards. Nos enfocamos en brindar soporte funcional y técnico para ayudarte a obtener el máximo valor de tu inversión tecnológica.</p>
+    </div>
+  </section>
+
+  <!-- Sección: Servicios -->
+  <section id="servicios" class="bg-white p-6">
+    <h2 class="text-2xl font-bold mb-4">Servicios</h2>
+    <ul class="list-disc pl-6 space-y-2">
+      <li>Consultoría funcional en JD Edwards</li>
+      <li>Soporte técnico especializado</li>
+      <li>Implementación de módulos específicos</li>
+      <li>Capacitación a usuarios finales</li>
+    </ul>
+    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1470&q=80" alt="Servicios ERP" class="mt-6 w-full rounded shadow">
+  </section>
+
+  <!-- Sección: Soporte -->
+  <section id="soporte" class="p-6">
+    <h2 class="text-2xl font-bold mb-4">¿Qué tipo de soporte necesitas?</h2>
+    <form id="form-soporte" class="space-y-4">
+      <div>
+        <label class="block">¿Soporte funcional?</label>
+        <input type="checkbox" name="funcional" class="mr-2">Sí
+      </div>
+      <div>
+        <label class="block">¿Soporte técnico?</label>
+        <input type="checkbox" name="tecnico" class="mr-2">Sí
+      </div>
+      <div>
+        <label class="block">¿Otro tipo de soporte?</label>
+        <input type="text" class="w-full p-2 border rounded" placeholder="Describe brevemente">
+      </div>
+    </form>
+  </section>
+
+  <!-- Sección: Contacto -->
+  <section id="contacto" class="bg-white p-6">
+    <h2 class="text-2xl font-bold mb-4">Contacto</h2>
+    <form id="form-contacto" class="space-y-4">
+      <div>
+        <label class="block">Nombre</label>
+        <input type="text" id="nombre" class="w-full p-2 border rounded" required>
+      </div>
+      <div>
+        <label class="block">Teléfono</label>
+        <input type="tel" id="telefono" class="w-full p-2 border rounded" required>
+      </div>
+      <div>
+        <label class="block">Organización</label>
+        <input type="text" id="organizacion" class="w-full p-2 border rounded">
+      </div>
+      <div>
+        <label class="block">Comentarios</label>
+        <textarea id="comentarios" class="w-full p-2 border rounded"></textarea>
+      </div>
+      <button type="button" onclick="enviarWhatsApp()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Enviar a WhatsApp</button>
+      <p id="mensaje-exito" class="text-green-600 hidden">¡Gracias! Un profesional se pondrá en contacto contigo.</p>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="p-4 bg-gray-100 text-center mt-6">
+    <p>Contacto: <a href="mailto:gerardo.alanis@ag-consultoria.com" class="text-blue-600">gerardo.alanis@ag-consultoria.com</a> | Teléfono: 5513447219</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Función para validar y enviar datos por WhatsApp
+    function enviarWhatsApp() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const organizacion = document.getElementById('organizacion').value.trim();
+      const comentarios = document.getElementById('comentarios').value.trim();
+
+      if (!nombre || !telefono) {
+        alert('Por favor completa los campos obligatorios (nombre y teléfono).');
+        return;
+      }
+
+      const mensaje = `Hola, mi nombre es ${nombre}, de la organización ${organizacion}. Tel: ${telefono}. Comentarios: ${comentarios}`;
+      const url = `https://wa.me/5215513447219?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+      document.getElementById('mensaje-exito').classList.remove('hidden');
+    }
+  </script>
+</body>
+
+</html>
